@@ -1,17 +1,28 @@
-var cont = 3;
+//universal variables
+var count = 3;
+var xhttp = new XMLHttpRequest();
+//function pairiting couples
 function pairiting()
 {
     var friends = new Array(12);
-    for(var num=1; num<=friends.length;num++)
+    var blockingKey = document.getElementById('txtBlockingPassword').value;
+    var count2 = document.getElementById('frmFriends').getAttribute('value');
+    if(count2>3)
+        {
+            friends[count2]=document.getElementById('txtName'+count2).value +','+document.getElementById('txtPhone'+count2).value;
+        }
+    for(var num=1;num<=count2;num++)
     {
-        friends[num]=document.getElementById('txtName1').value +','+ document.getElementById('txtPhone1').value;
+        friends[num]=document.getElementById('txtName'+num).value +','+ document.getElementById('txtPhone'+num).value +','+ Math.floor(Math.random() * (count2 - num + 1) ) + num;
     }
+    
 }
+//function add fields for friends
 function addFriend(){
     var frmFriends=document.getElementById('frmFriends');
-    frmFriends.setAttribute('value',cont);
-    cont= cont+1;
-    if (cont==12)
+    count= count+1;
+    frmFriends.setAttribute('value',count);
+    if (count==12)
         {
             var btnAdd=document.getElementById('btnAdd');
             btnAdd.setAttribute('disabled',true);
@@ -21,7 +32,7 @@ function addFriend(){
     var divfriends2=document.getElementById('friendspart2');
     var divfriend=document.createElement('div');
     divfriend.setAttribute('id','friend');
-    divfriend.setAttribute('value',cont);
+    divfriend.setAttribute('value',count);
     var divRowName=document.createElement('div');
     divRowName.setAttribute('class','row');
     var lblName=document.createElement('label');
@@ -30,7 +41,8 @@ function addFriend(){
     txtName.setAttribute('type','text');
     txtName.setAttribute('class','name');
     txtName.setAttribute('placeholder','Name');
-    txtName.setAttribute('id','txtName'+cont);
+    txtName.setAttribute('id','txtName'+count);
+    txtName.setAttribute('required',true);
     var divRowPhone=document.createElement('div');
     divRowPhone.setAttribute('class','row');
     var lblPhone = document.createElement('label');
@@ -39,7 +51,8 @@ function addFriend(){
     txtPhone.setAttribute('type','text');
     txtPhone.setAttribute('class','phone');
     txtPhone.setAttribute('placeholder','Phone');
-    txtPhone.setAttribute('id','txtPhone'+cont);
+    txtPhone.setAttribute('id','txtPhone'+count);
+    txtPhone.setAttribute('required',true);
     divRowName.appendChild(lblName);
     divRowName.appendChild(txtName);
     divfriend.appendChild(divRowName);

@@ -113,17 +113,3 @@ label{
 #createlist{
     font-size: 20pt;
 }
-.lblCouple{
-    margin-left: 40%;
-    margin-right: 10px;
-}
-.lblmessage{
-    font-size: 10pt;
-    margin-left: 50%;
-    margin-right: 10px;
-}
-.txtCouple{
-    border-radius: 5px;
-    border: 1px solid #828282;
-    margin-top: 1%;
-}

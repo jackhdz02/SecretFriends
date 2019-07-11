@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App/friend;
 
 class FriendsController extends Controller
 {
@@ -34,7 +35,20 @@ class FriendsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validData = $request->validate([
+            'txtname' => 'required | min:4',
+            'txtphone' => 'required | numeric | min:10',
+            'secret' => 'required | numeric |min:1',
+            'blocking_key' => 'required | min:5'
+        ]);
+        $friend = new friend();
+        $friend->name = $request-> get('txtname');
+        $friend->phone = $request-> get('txtphone');
+        $friend->secret = $request ->get('');
+        $friend->save();
+        $list = new list_friends();
+        $list->blockingKey = $request ->get('txtBlockingPassword');
+        $list->save();
     }
 
     /**

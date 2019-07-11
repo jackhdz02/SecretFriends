@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <h1>Welcome</h1>
-        <a href="/create/listFriends" id="createlist">Start the game</a>
+            <a href="/create/listFriends" id="createlist">Start the game</a>
         </div>
     </body>
 </html>

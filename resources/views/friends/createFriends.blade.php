@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <form id="frmFriends">
+    <form id="frmFriends" value="3">
         <div id="friendspart1">
             <div class="row">
                 <h4>Friends</h4>
@@ -37,31 +37,31 @@
             <div id="friend" value="1">
                 <div class="row">
                     <label>Name </label>
-                    <input type="text" class="name" placeholder="Name" id="txtName1">
+                    <input type="text" class="name" placeholder="Name" id="txtName1" required>
                 </div>
                 <div class="row">
                     <label>Phone </label>
-                    <input type="text" class="phone"   placeholder="Phone" id="txtPhone1">
+                    <input type="text" class="phone"   placeholder="Phone" id="txtPhone1" required>
                 </div>
             </div>
             <div id="friend" value="2">
                 <div class="row">
                     <label>Name </label>
-                    <input type="text" class="name" placeholder="Name" id="txtName2">
+                    <input type="text" class="name" placeholder="Name" id="txtName2" required>
                 </div>
                 <div class="row">
                     <label>Phone </label>
-                    <input type="text" class="phone" placeholder="Phone" id="txtPhone2">
+                    <input type="text" class="phone" placeholder="Phone" id="txtPhone2" required>
                 </div>
             </div>
             <div id="friend" value="3">
                 <div class="row">
                     <label>Name </label>
-                    <input type="text" class="name" placeholder="Name" id="txtName3">
+                    <input type="text" class="name" placeholder="Name" id="txtName3" required>
                 </div>
                 <div class="row">
                     <label>Phone </label>
-                    <input type="text" class="phone" placeholder="Phone" id="txtPhone3">
+                    <input type="text" class="phone" placeholder="Phone" id="txtPhone3" required>
                 </div>
             </div>
         </div>

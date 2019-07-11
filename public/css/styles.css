@@ -1,0 +1,129 @@
+html, body {
+    background-color: #E9E2FD;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+.full-height {
+    height: 100vh;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.position-ref {
+    position: relative;
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.content {
+    text-align: center;
+}
+.title {
+    font-size: 84px;
+}
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+a{
+    color:#000;
+    font-size: 12pt;
+}
+.footer
+{
+    text-align: center;
+    font-size: 10pt;
+}
+h1{
+    text-align: center;
+    font-size: 56pt;
+}
+h2{
+    text-align: center;
+}
+h4{
+    margin-left: 15px;
+}
+label{
+    font-size: 14pt;
+    margin-left: 3%;
+}
+.names{
+    margin-left: 5%;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #828282;
+}
+.name, .phone{
+    margin-left: 5%;
+    width: 25%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #828282;
+}
+.lblblockingKey
+{
+    margin-left: 15px;
+}
+.blockingKey
+{
+    width: 25%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #828282;
+    margin-left: 40px;
+}
+#btnAdd{
+    margin-left: 60%;
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #828282;
+}
+#btnAdd img{
+    width: 50%;
+}
+#btnPairing{
+    margin: 10px;
+    margin-left: 40%;
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #828282;
+}
+#createlist{
+    font-size: 20pt;
+}
+.lblCouple{
+    margin-left: 40%;
+    margin-right: 10px;
+}
+.lblmessage{
+    font-size: 10pt;
+    margin-left: 50%;
+    margin-right: 10px;
+}
+.txtCouple{
+    border-radius: 5px;
+    border: 1px solid #828282;
+    margin-top: 1%;
+}

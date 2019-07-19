@@ -56,6 +56,9 @@ h1{
 h2{
     text-align: center;
 }
+h3{
+    text-align: center;
+}
 h4{
     margin-left: 15px;
 }
@@ -112,4 +115,7 @@ label{
 }
 #createlist{
     font-size: 20pt;
+}
+.td{
+    width: 10%;
 }

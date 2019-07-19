@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class list_friends extends Model
 {
-    protected $table = 'list_friends';
-    protected $fillable = [
-        'blocking_key',
-        'friend_id'
-    ];
+    public function Friends() {
+        return $this->hasMany(friends::class);
+    }
 }

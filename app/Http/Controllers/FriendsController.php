@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App/friend;
+use App\friend;
+use App\secret;
+use App\list_friends;
 
 class FriendsController extends Controller
 {
@@ -14,9 +16,9 @@ class FriendsController extends Controller
      */
     public function index()
     {
-        //
+        $friends = friend::all();
+        return view('friends.listFriends');
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -35,20 +37,17 @@ class FriendsController extends Controller
      */
     public function store(Request $request)
     {
-        $validData = $request->validate([
-            'txtname' => 'required | min:4',
-            'txtphone' => 'required | numeric | min:10',
-            'secret' => 'required | numeric |min:1',
-            'blocking_key' => 'required | min:5'
-        ]);
         $friend = new friend();
-        $friend->name = $request-> get('txtname');
-        $friend->phone = $request-> get('txtphone');
-        $friend->secret = $request ->get('');
+        $friend = friend::all();
+        foreach($friend as $friend){
+            $friend = array('name'=>$request->name,'phone'=>$request->phone, 'secret'=>$request->name);
+        }
         $friend->save();
         $list = new list_friends();
-        $list->blockingKey = $request ->get('txtBlockingPassword');
-        $list->save();
+        $list->blocking_key = $request->get('txtBlockingPassword');
+        $list->friend_id = $friend->id;
+        $list->save(); 
+        return redirect('/');
     }
 
     /**

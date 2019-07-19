@@ -15,6 +15,7 @@
     <body>
         <div class="container">
             <h1>Welcome</h1>
+            <hr>
             <a href="/create/listFriends" id="createlist">Start the game</a>
         </div>
     </body>

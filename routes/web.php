@@ -12,5 +12,7 @@
 */
 Auth::routes();
 Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::resource('friends','FriendsController');
-Route::get('/create/listFriends','FriendsController@create');
+Route::resource('/friends','FriendsController');
+Route::get('create/listFriends','FriendsController@create');
+Route::get('/post_list/', 'FriendsController@store');
+Route::get('/listFriends/list','FriendsController@index');
